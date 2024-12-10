@@ -569,6 +569,10 @@ public class palindromeFrame extends javax.swing.JFrame {
     
     public void afficherListeDansJTextArea(ArrayList<String> liste) {
     StringBuilder contenu = new StringBuilder();
+    if (liste.isEmpty()) {
+        jTextArea1.setText("Aucun mot trouve.");
+        return;
+    }
     for (String element : liste) {
         contenu.append(element).append("\n");
     }
